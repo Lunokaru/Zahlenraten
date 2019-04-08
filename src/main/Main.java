@@ -36,17 +36,17 @@ public class Main {
 			do { // tue
 				try { // Versuche
 					eingabe = Integer.parseInt(br.readLine()); // Setz eingabe auf Integer von br.readLine()
+					if (eingabe < zufallsZahl) { // wenn eingabe kleiner als zufallsZahl
+						System.out.println("Die eingegebene Zahl ist zu klein."); // gibt was aus
+						counter++; // Zähle counter + 1
+					} else if (eingabe > zufallsZahl) { // wenn eingabe größer als zufallsZahl
+						System.out.println("Die eingegebene Zahl ist zu groß."); // gibt was aus
+						counter++; // Zähle counter + 1
+					}
 				} catch (NumberFormatException e) { // Fang NumberFormatException ab
 					System.out.println("Ungültige Eingabe. Bitte ganze Zahl eingeben."); // gibt was aus
 				} catch (IOException e) { // Fang IOException ab
 					e.printStackTrace(); // gib Fehlermeldung aus
-				}
-				if (eingabe < zufallsZahl) { // wenn eingabe kleiner als zufallsZahl
-					System.out.println("Die eingegebene Zahl ist zu klein."); // gibt was aus
-					counter++; // Zähle counter + 1
-				} else if (eingabe > zufallsZahl) { // wenn eingabe größer als zufallsZahl
-					System.out.println("Die eingegebene Zahl ist zu groß."); // gibt was aus
-					counter++; // Zähle counter + 1
 				}
 			} while (eingabe != zufallsZahl); // Solange eingabe nicht gleich zufallsZahl
 			System.out.println("Glückwunsch, Zufallszahl: " + zufallsZahl + " wurde in " + counter + " Versuchen erraten."); // gibt was aus
