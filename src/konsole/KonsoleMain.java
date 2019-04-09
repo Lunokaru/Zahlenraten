@@ -1,7 +1,8 @@
 package konsole;
 
 public class KonsoleMain {
-
+	//Objektdefinition
+	
 	public static void konsolenmodus() {
 		try {
 			// Just one line and you are done !

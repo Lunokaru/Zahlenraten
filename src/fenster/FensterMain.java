@@ -28,7 +28,8 @@ public class FensterMain {
 	public static void fenstermodus() {
 		createAndShowGUI();
 	}
-
+	
+	//erstellt GUI und zeigt sie an
 	private static void createAndShowGUI() {
 		System.out.println("asd");
 		frame = new JFrame();
@@ -70,6 +71,7 @@ public class FensterMain {
 		tPFensterModus.setText("Willkommen zu Zahlenraten! \nEs wurde eine Zahl zwischen 1 und 1000 erstellt. \nWarte auf Eingabe:"); // gibt was aus
 	}
 
+	//Struktur des Spiels
 	private static void fenstermodusspiel() {
 		try { // Versuche
 			eingabe = Integer.parseInt(tfFensterModus.getText()); // Setz eingabe auf Integer von br.readLine()

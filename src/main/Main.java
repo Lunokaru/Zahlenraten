@@ -11,7 +11,7 @@ public class Main {
 		// Hauptprogramm
 		if (modus == 0) {// Konsole was choosen
 			konsole.KonsoleMain.konsolenmodus();
-		} else {// Fenster was chosen
+		} else if (modus == 1) {// Fenster was chosen
 			fenster.FensterMain.fenstermodus();
 		}
 	}
