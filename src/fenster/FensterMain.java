@@ -89,8 +89,13 @@ public class FensterMain {
 			tPFensterModus.setText("Glückwunsch, Zufallszahl: " + zufallsZahl + " wurde in " + counter + " Versuchen erraten."); // gibt was aus
 			String[] modi = { "Ja", "Nein" };
 			int modus = JOptionPane.showOptionDialog(null, "Wollen Sie noch eine Runde spielen?", "Neues Spiel", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, modi, "Ja");
-			frame.dispose();
-			createAndShowGUI();
+			if (modus == 0) { //wenn Ja
+				frame.dispose();
+				createAndShowGUI();
+			}else if (modus == 1) { //wenn Nein
+				System.exit(0);
+			}
+			
 		}
 	}
 }
