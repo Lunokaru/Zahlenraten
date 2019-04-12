@@ -1,5 +1,6 @@
 package fenster;
 
+import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.KeyAdapter;
@@ -26,12 +27,19 @@ public class FensterMain {
 	private static JTextPane tPFensterModus;
 
 	public static void fenstermodus() {
-		createAndShowGUI();
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					createAndShowGUI();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 	
 	//erstellt GUI und zeigt sie an
 	private static void createAndShowGUI() {
-		System.out.println("asd");
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
